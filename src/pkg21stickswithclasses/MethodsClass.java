@@ -31,11 +31,6 @@ public class MethodsClass {
         return t;
     }
 
-    public static int sticksCount(int t, int s) {
-        s = s - t;
-        return s;
-    }
-
     public static boolean evaluateEnd(int s) {
         return s <= 0;
     }
@@ -51,4 +46,5 @@ public class MethodsClass {
 
         return toTake;
     }
+    
 }
