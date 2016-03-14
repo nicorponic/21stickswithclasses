@@ -20,25 +20,25 @@ public class Utils {
         return toTake;
     }
 
-    public static int takeCheck(int sticks) {
+    public static int takeCheck(int userSticks) {
 
-        if (sticks > 2) {
+        if (userSticks > 2) {
             return 2;
-        } else if (sticks
+        } else if (userSticks
                 < 1) {
             return 1;
         }
-        return sticks;
+        return userSticks;
     }
 
-    public static boolean evaluateEnd(int sticks) {
-        return sticks <= 0;
+    public static boolean evaluateEnd(int sticksLeft) {
+        return sticksLeft <= 0;
     }
 
-    public static int cpuEvaluateMove(int sticks
+    public static int cpuEvaluateMove(int sticksLeft
     ) {
         int toTake;
-        if ((sticks - 2) % 3 == 0 || sticks - 2 == 0) {
+        if ((sticksLeft - 2) % 3 == 0 || sticksLeft - 2 == 0) {
             toTake = 1;
         } else {
             toTake = 2;
