@@ -9,16 +9,16 @@ package pkg21stickswithclasses;
  *
  * @author N1CO
  */
-public class Sticks {
+public class SticksHolder {
 
     private int sticks = 21;
 
-    void setSticks(int a) {
-        sticks = a;
+    void setSticks(int amount) {
+        sticks = amount;
     }
 
-    void setSticks(int a, int b) {
-        sticks = a - b;
+    void reduceSticks(int sticksBefore, int taken) {
+        sticks = sticksBefore - taken;
     }
 
     int getSticks() {

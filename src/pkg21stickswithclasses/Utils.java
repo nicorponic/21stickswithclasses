@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author N1CO
  */
-public class MethodsClass {
+public class Utils {
 
     public static int askUserForSticks() {
 
@@ -20,25 +20,25 @@ public class MethodsClass {
         return toTake;
     }
 
-    public static int takeCheck(int t) {
+    public static int takeCheck(int sticks) {
 
-        if (t > 2) {
+        if (sticks > 2) {
             return 2;
-        } else if (t
+        } else if (sticks
                 < 1) {
             return 1;
         }
-        return t;
+        return sticks;
     }
 
-    public static boolean evaluateEnd(int s) {
-        return s <= 0;
+    public static boolean evaluateEnd(int sticks) {
+        return sticks <= 0;
     }
 
-    public static int cpuEvaluateMove(int a
+    public static int cpuEvaluateMove(int sticks
     ) {
         int toTake;
-        if ((a - 2) % 3 == 0 || a - 2 == 0) {
+        if ((sticks - 2) % 3 == 0 || sticks - 2 == 0) {
             toTake = 1;
         } else {
             toTake = 2;
