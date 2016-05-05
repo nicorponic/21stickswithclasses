@@ -35,7 +35,7 @@ public class Main {
 
                 int take = Utils.takeSticksFromUser();
 
-                sticks.reduceSticks(sticks.getSticks(), take);
+                sticks.reduceSticks(take);
 
                 if (sticks.getSticks() <=0) {
                     System.out.println("You Lost!");
