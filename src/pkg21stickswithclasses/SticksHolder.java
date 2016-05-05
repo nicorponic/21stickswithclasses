@@ -13,15 +13,19 @@ public class SticksHolder {
 
     private int sticks = 21;
 
-    void setSticks(int amount) {
+    public void setSticks(int amount) {
         sticks = amount;
     }
 
-    void reduceSticks(int sticksBefore, int taken) {
+    public void reduceSticks(int sticksBefore, int taken) {
         sticks = sticksBefore - taken;
     }
 
-    int getSticks() {
+    public void reduceSticks(int taken) {
+        sticks -= taken;
+    }
+
+    public int getSticks() {
         return sticks;
     }
 
