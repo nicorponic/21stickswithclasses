@@ -13,26 +13,18 @@ import java.util.Scanner;
  */
 public class Utils {
 
-    public static int askUserForSticks() {
+    public static int takeSticksFromUser() {
 
-        Scanner take = new Scanner(System.in);
-        int toTake = take.nextInt();
-        return toTake;
-    }
-
-    public static int takeCheck(int userSticks) {
-
-        if (userSticks > 2) {
+        Scanner scan = new Scanner(System.in);
+        int userTakes = scan.nextInt();
+        if (userTakes > 2) {
+            System.out.println("You entered too many sticks! Only 2 will be taken.");
             return 2;
-        } else if (userSticks
-                < 1) {
+        } else if (userTakes < 1) {
+            System.out.println("You entered too few sticks! 1 will be taken.");
             return 1;
         }
-        return userSticks;
-    }
-
-    public static boolean evaluateEnd(int sticksLeft) {
-        return sticksLeft <= 0;
+        return userTakes;
     }
 
     public static int cpuEvaluateMove(int sticksLeft
@@ -43,8 +35,8 @@ public class Utils {
         } else {
             toTake = 2;
         }
-
+        System.out.println("CPU takes " + toTake + " sticks.");
         return toTake;
     }
-    
+
 }
